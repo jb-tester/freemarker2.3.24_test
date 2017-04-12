@@ -1,4 +1,5 @@
 <#ftl output_format='HTML' auto_esc=true>
+<#-- @ftlvariable name="javanames" type="java.util.Map" -->
 
 <#-- @ftlvariable name="today" type="java.util.Date" -->
 
@@ -75,3 +76,15 @@ ${myNumber?string.computer}
 <#list jvn as jvn_key, jvn_val>
     ${jvn_key}: ${jvn_val}
 </#list>-->
+
+<#assign myHash = { "name": "mouse", "price": 50 }>
+<#list myHash?keys as k>
+${k}
+</#list>
+
+<#list javanames?keys as jk>
+${jk}
+</#list>
+<#list javanames?values as jv>
+${jv}
+</#list>
