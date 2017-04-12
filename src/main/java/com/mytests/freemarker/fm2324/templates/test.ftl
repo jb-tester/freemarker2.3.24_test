@@ -88,3 +88,13 @@ ${jk}
 <#list javanames?values as jv>
 ${jv}
 </#list>
+
+<#assign mapPlus={1:2} + {3:4} + {5:6}>
+<#list mapPlus?keys as kk>
+${kk}
+</#list>
+
+<#assign seq=["1"] + ["2", "3"]>
+<#list seq as elem>
+${elem}
+</#list>
