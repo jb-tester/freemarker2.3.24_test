@@ -89,12 +89,16 @@ ${jk}
 ${jv}
 </#list>
 
-<#assign mapPlus={1:2} + {3:4} + {5:6}>
+<#assign seq=["1"] + ["2", "3"] + ["4", "5"] >
+<#list seq?reverse as elem>
+${elem}
+</#list>
+
+<#assign mapPlus = {"1":"2"} + {"3":"4"} + {"5":"6"} + javanames>
 <#list mapPlus?keys as kk>
 ${kk}
 </#list>
 
-<#assign seq=["1"] + ["2", "3"]>
-<#list seq as elem>
-${elem}
-</#list>
+
+
+<#assign newHash = {"1":2,"3":4}>
